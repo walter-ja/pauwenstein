@@ -13,127 +13,216 @@
       background: url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
       background-size: cover;
     }
-
     .overlay {
       background-color: rgba(0, 0, 0, 0.65);
       min-height: 100vh;
       padding: 2rem;
     }
-
     h1 {
       text-align: center;
       margin-bottom: 2rem;
     }
-
     .dag {
       margin-bottom: 2rem;
       background-color: rgba(255, 255, 255, 0.1);
       padding: 1rem;
       border-radius: 10px;
     }
-
     .dag h2 {
       margin-top: 0;
       color: #ffd700;
     }
-
     ul {
       padding-left: 1.5rem;
     }
-
     li {
       margin-bottom: 0.5rem;
     }
-
     .details {
       font-size: 0.95em;
       margin-left: 1rem;
       color: #ddd;
     }
-
     .instructie {
       margin-top: 3rem;
       padding: 1rem;
       background-color: rgba(255, 255, 255, 0.2);
       border-left: 4px solid #ffd700;
     }
-
     .instructie p {
       margin: 0.5rem 0;
     }
+    #passwordSection {
+      text-align: center;
+      margin-top: 100px;
+    }
+    #mainContent { display: none; }
   </style>
+  <script>
+    function checkPassword() {
+      const input = document.getElementById('passwordInput').value;
+      if (input === 'prijs') {
+        document.getElementById('passwordSection').style.display = 'none';
+        document.getElementById('mainContent').style.display = 'block';
+      } else {
+        alert('Wachtwoord onjuist');
+      }
+    }
+  </script>
 </head>
 <body>
-  <div class="overlay">
-    <h1>Vakantieplanning Parijs 2025</h1>
+  <div id="passwordSection">
+    <h2>Voer wachtwoord in om de vakantieplanning te bekijken</h2>
+    <input type="password" id="passwordInput" placeholder="Wachtwoord" />
+    <button onclick="checkPassword()">Toegang</button>
+  </div>
 
-    <div class="dag">
-      <h2>Zondag – 20 april 2025</h2>
-      <ul>
-        <li>16:30 – Bus naar Rotterdam Centraal
-          <div class="details">Ophaallocatie: Rijswijk<br>Bestemming: Rotterdam Centraal<br>Type: Bus<br>Klasse: Other Class</div>
-        </li>
-        <li>Vertrek vanaf Rotterdam Centraal
-          <div class="details">Reis naar Parijs</div>
-        </li>
-        <li>Aankomst en inchecken: Hotel Mercure Paris Montmartre Sacré Coeur
-          <div class="details">Kamers: Superior Room, 1 King Bed (Bed & Breakfast)<br>Passagiers: 2
-			 <br>Kamers: Superior Room, 1 King Bed (Bed & Breakfast)<br>Passagiers: 1
-			 <br>Kamers: Superior Room, 1 King Bed (Bed & Breakfast)<br>Passagiers: 1
-			 <br>Locatie: bij Sacré-Coeur</div>
-        </li>
-      </ul>
-    </div>
+  <div id="mainContent">
+    <div class="overlay">
+      <h1>Vakantieplanning Parijs 2025</h1>
 
-    <div class="dag">
-      <h2>Maandag – 21 april 2025</h2>
-      <ul>
-        <li>Vrije dag
-          <div class="details">Nog geen specifieke activiteiten gepland</div>
-        </li>
-      </ul>
-    </div>
+      <!-- Volledige inhoud van de planning komt hier -->
 
-    <div class="dag">
-      <h2>Dinsdag – 22 april 2025</h2>
-      <ul>
-        <li>09:30 – Dagtrip naar Versailles (nog verder invullen)
-          <div class="details">Inclusief toegang tot Paleis en Tuinen<br>Aantal: 4 volwassenen</div>
-        </li>
-      </ul>
-    </div>
+      <div class="dag">
+        <h2>Zondag – 20 april 2025</h2>
+        <ul>
+          <li>11:30 - 13:10 Sy+Vi concert
+            <div class="details">Nog afspreken: Komt Vi eerst naar Sy of gaat Vi na afloop eerst naar huis?</div>
+          </li>
+          <li>16:00 – Klaar voor vertrek</li>
+          <li>16:30 – Bus naar Rotterdam Centraal
+            <div class="details">Ophaallocatie: Rijswijk<br>Bestemming: Rotterdam Centraal<br>Type: Bus<br>Beneden (Smullers, Backword/doner) kan je eten halen. Je mag eten en drinken gewoon meenemen de trein in.<br>In de Eurostar-trein zelf is er ook een bistro/barwagen met snacks.</div>
+          </li>
+          <li>17:30 Inchecken Eurostar
+            <div class="details">Aanbevolen om minstens 20 minuten van tevoren aanwezig te zijn (liefst 30 min)<br>Check altijd de schermen op het station.<br>Bagagescan en ticketcontrole.</div>
+          </li>
+          <li>17:59-20:35 Eurostar
+            <div class="details">Vertrek vanaf Rotterdam Centraal naar Parijs</div>
+          </li>
+          <li>21:00 Naar Hoteladres: 3 Rue Caulaincourt, 75018 Paris
+            <div class="details">Metroroute vanaf Gare du Nord via lijn 4 en 2 naar Place de Clichy, dan ±6 min lopen.<br><a href="https://www.google.com/maps/dir/Gare+du+Nord,+Paris/Mercure+Paris+Montmartre+Sacr%C3%A9+C%C5%93ur,+Rue+Caulaincourt,+Paris/" target="_blank">Wandelroute op Google Maps</a></div>
+          </li>
+          <li>Aankomst en inchecken: Hotel Mercure Paris Montmartre Sacré Coeur
+            <div class="details">Kamers: Superior Room, 1 King Bed (B&B)<br>Passagiers: 2 + 1 + 1</div>
+          </li>
+          <li>22:00 avondwandeling, misschien Sacré-Cœur</li>
+        </ul>
+      </div>
 
-    <div class="dag">
-      <h2>Woensdag – 23 april 2025</h2>
-      <ul>
-        <li>11:30 – Bezoek aan het Louvre</li>
-        <li>15:00 – Bezoek aan Musée d’Orsay</li>
-        <li>Disneyland Paris – 1-dagticket
-          <div class="details">Aantal: 2 volwassenen (12+)</div>
-        </li>
-      </ul>
-    </div>
+      <div class="dag">
+        <h2>Maandag – 21 april 2025</h2>
+        <ul>
+          <li>Ochtendprogramma
+            <div class="details">Musée de la Vie Romantique (±10 min lopen)<br>Gratis toegang tot vaste collectie<br>Theesalon met koffie<br>Sacré-Cœur wandeling voor de drukte of met Funiculaire</div>
+          </li>
+          <li>Lunch + Canal Saint-Martin
+            <div class="details">Lijn 2 metro naar Jaurès of Colonel Fabien<br>Rustige sfeer, terrasjes, boetiekjes</div>
+          </li>
+          <li>Middag Route 1: Klassiek Parijs
+            <div class="details">Musée de l’Armée, Arc de Triomphe, Champs-Élysées<br>Metroroute via Invalides, overstappen bij Montparnasse<br>Rustmoment bij Musée of terras op Champs</div>
+          </li>
+          <li>Middag Route 2: Rust & Reflectie
+            <div class="details">Lunch bij Père Lachaise<br>Bezoek graven + Atelier des Lumières (Van Gogh e.a.)<br>Afsluiten met koffie in Oberkampf</div>
+          </li>
+          <li>Avondeten
+            <div class="details">Bijv. Bouillon Pigalle (doorlopend open), Le Petit Canard (rustiger), Le Relais Gascon (open vanaf 12u)</div>
+          </li>
+        </ul>
+      </div>
 
-    <div class="dag">
-      <h2>Donderdag – 24 april 2025</h2>
-      <ul>
-        <li>Uitchecken Hotel Mercure
-          <div class="details">Laatste dag in Parijs</div>
-        </li>
-        <li>Vertrek – Paris Gare du Nord (Eurostar)
-          <div class="details">Klasse: Other Class</div>
-        </li>
-        <li>21:15 – Bus naar huis
-          <div class="details">Ophaallocatie: Centraal, Rotterdam</div>
-        </li>
-      </ul>
-    </div>
+      <div class="dag">
+        <h2>Dinsdag – 22 april 2025</h2>
+        <ul>
+          <li>09:15 Verzamelen bij Invalides metro-exit (lijn 8 & 13)</li>
+          <li>09:30 – Dagtrip naar Versailles
+            <div class="details">Inclusief toegang tot Paleis en Tuinen<br>Aantal: 4 volwassenen</div>
+          </li>
+          <li>16:00 Terug van excursie</li>
+        </ul>
+      </div>
 
-    <div class="instructie">
-      <h2>📌 Bijwerken van deze pagina</h2>
-      <p>1. Pas het bestand aan in: <strong>H:\Documenten\*****\vakantie\2025 Parijs\index.html</strong></p>
-      <p>2. Open: <a href="https://github.com/walter-ja/pauwenstein" style="color: #ffd700;" target="_blank">https://github.com/walter-ja/pauwenstein</a></p>
-      <p>3. Upload het bijgewerkte <code>index.html</code> bestand</p>
+      <div class="dag">
+        <h2>Woensdag – 23 april 2025</h2>
+        <ul>
+          <li>Sy+Vi 11:30 – Bezoek aan het Louvre</li>
+          <li>Sy+Vi 15:00 – Bezoek aan Musée d’Orsay</li>
+          <li>Wa+Hu Disneyland Paris – 1-dagticket
+            <div class="details">Aantal: 2 volwassenen (12+)<br>Metro + RER route: Place de Clichy → La Chapelle → Gare du Nord → Châtelet → RER A naar Marne-la-Vallée – Chessy<br>±1u15 reistijd</div>
+          </li>
+          <li>17:30 Wa+Hu Terug naar Parijs
+            <div class="details">RER A terug via Châtelet – Les Halles → RER B naar Gare du Nord → Metro lijn 2 naar Place de Clichy</div>
+          </li>
+          <li>20:15 Sy+Vi+Hu Aanwezig hoofdingang Église de la Madeleine</li>
+          <li>20:45 – 22:00 Sy+Vi+Hu Concert Église de la Madeleine</li>
+        </ul>
+      </div>
+
+      <div class="dag">
+        <h2>Donderdag – 24 april 2025</h2>
+        <ul>
+          <li>Vi+Sy ochtendbezoek Musée d’Orsay</li>
+          <li>Uitchecken Hotel Mercure
+            <div class="details">Laatste dag in Parijs</div>
+          </li>
+          <li>Dagactiviteiten nog invullen</li>
+          <li>17:45 Inchecken Eurostar
+            <div class="details">Check-in opent 90 min van tevoren<br>Sluit 30 min voor vertrek</div>
+          </li>
+          <li>18:25 – Vertrek – Paris Gare du Nord (Eurostar)
+            <div class="details">Aankomst Rotterdam 20:35</div>
+          </li>
+          <li>21:15 – Bus naar huis
+            <div class="details">Ophaallocatie: Centraal, Rotterdam</div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="details">
+<h3>🔁 Terugreis vanaf Disneyland (Woensdag)</h3>
+<p>🎯 Doel: aankomst hotel rond 19:00 uur</p>
+<p><strong>Reistijd:</strong> ± 1u15, dus je moet de trein nemen rond 17:40 – 17:45</p>
+<ol>
+  <li><strong>Stap op RER A</strong> bij Marne-la-Vallée – Chessy</li>
+  <li>Neem RER A richting Paris / Saint-Germain-en-Laye</li>
+  <li>Blijf zitten tot Châtelet – Les Halles (± 40 min)</li>
+  <li><strong>Overstappen op RER B naar Gare du Nord</strong></li>
+  <li>1 halte naar Gare du Nord → overstappen op <strong>Metro Lijn 2 (richting Porte Dauphine)</strong></li>
+  <li>Uitstappen bij Place de Clichy (5 haltes)</li>
+  <li>Loop ± 5-6 minuten naar hotel</li>
+</ol>
+<table style="margin-top:1em; border-collapse: collapse;">
+  <thead>
+    <tr><th style="border-bottom: 1px solid #ccc; padding: 4px;">Tijd</th><th style="border-bottom: 1px solid #ccc; padding: 4px;">Actie</th></tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding: 4px;">17:40</td><td style="padding: 4px;">Vertrek RER A vanuit Marne-la-Vallée – Chessy</td></tr>
+    <tr><td style="padding: 4px;">18:20</td><td style="padding: 4px;">Aankomst Châtelet – Les Halles</td></tr>
+    <tr><td style="padding: 4px;">18:30</td><td style="padding: 4px;">RER B naar Gare du Nord</td></tr>
+    <tr><td style="padding: 4px;">18:40</td><td style="padding: 4px;">Metro lijn 2 vanaf Gare du Nord</td></tr>
+    <tr><td style="padding: 4px;">18:50 – 18:55</td><td style="padding: 4px;">Aankomst hotel</td></tr>
+  </tbody>
+</table>
+<br>
+<h3>🍽️ Avondeten op maandag (aanvulling)</h3>
+<p><strong>Hoe laat eten Parijzenaren meestal?</strong><br>
+Tussen 19:30 en 21:30 uur. Restaurants openen vaak rond 19:00 uur. Wil je rond 18:00 eten, zoek dan naar plekken met <em>service continu</em>.</p>
+<p><strong>Moet je reserveren op tweede paasdag?</strong><br>
+Ja, zeker aan te raden. Populaire plekken zitten sneller vol, en veel restaurants zijn gesloten op feestdagen of maandagen.</p>
+<h4>Aanraders:</h4>
+<ul>
+  <li><strong>Bouillon Pigalle</strong> – Klassiek Frans, populair en betaalbaar<br>Hoofdgerechten €10-15, open vanaf 11:30 tot middernacht</li>
+  <li><strong>Le Petit Canard</strong> – Rustig en charmant, gespecialiseerd in eend, ook vega<br>Open vanaf 19:00, €20-30 p.p.</li>
+  <li><strong>Le Relais Gascon</strong> – Zuid-Franse keuken, ook om 18:00 open<br>Prijs: €15-25, goede doorlopende service</li>
+</ul>
+<p><strong>Samenvatting:</strong> Vroeg eten kan, maar kies een restaurant met doorlopende service. Reserveren op tweede paasdag is slim.</p>
+</div>
+
+      <div class="instructie">
+        <h2>📌 Bijwerken van deze pagina</h2>
+        <p>1. Pas het bestand aan in: <strong>H:\Documenten\*****\vakantie\2025 Parijs\index.html</strong></p>
+        <p>2. Open: <a href="https://github.com/walter-ja/pauwenstein" style="color: #ffd700;" target="_blank">https://github.com/walter-ja/pauwenstein</a></p>
+        <p>3. Upload het bijgewerkte <code>index.html</code> bestand</p>
+      </div>
     </div>
   </div>
 </body>
